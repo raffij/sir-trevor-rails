@@ -1378,8 +1378,8 @@
                 text: data.text,
                 created_at: data.created_at,
                 status_url: url,
-                id: id,
-                urls: entities.urls
+                id: data.id,
+                urls: data.entities.urls
               };
               
               // Save this data on the block
