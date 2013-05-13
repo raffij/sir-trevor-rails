@@ -3,8 +3,7 @@ module SirTrevor
   class Engine < Rails::Engine
 
     require 'redcarpet'
-    require 'twitter-text'
-
+    
     initializer "sir_trevor.load_app_instance_data" do |app|
       SirTrevor.setup do |config|
         config.app_root = app.root
