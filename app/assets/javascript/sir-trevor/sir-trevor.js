@@ -1368,6 +1368,7 @@
             
             var tweetCallbackSuccess = function(data) {
               // Parse the twitter object into something a bit slimmer..
+
               var obj = {
                 user: {
                   profile_image_url: data.user.profile_image_url,
@@ -1378,7 +1379,7 @@
                 text: data.text,
                 created_at: data.created_at,
                 status_url: url,
-                id: data.id,
+                id: data.id_str,
                 urls: data.entities.urls
               };
               
@@ -1395,7 +1396,7 @@
             
             // Make our AJAX call
             $.ajax({
-              url: "//api.twitter.com/1/statuses/show/" + tweetID + ".json",
+              url: "//api.twitter.com/1/statuses/show/" + tweetID + ".json?include_entities=true",
               dataType: "JSONP",
               success: _.bind(tweetCallbackSuccess, this),
               error: _.bind(tweetCallbackFail, this)
