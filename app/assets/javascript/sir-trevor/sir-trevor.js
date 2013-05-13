@@ -1377,7 +1377,9 @@
                 },
                 text: data.text,
                 created_at: data.created_at,
-                status_url: url
+                status_url: url,
+                id: id,
+                urls: entities.urls
               };
               
               // Save this data on the block
