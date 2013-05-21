@@ -37,6 +37,10 @@ module SirTrevor
           render(:partial => "sir-trevor/blocks/video_block", :locals => {:block => video['data'], :image_type => image_type, :protocol => request.protocol}) if video.has_key?("data")
         end
       end
+
+      def render_sir_trevor_text(json)
+        pluck_sir_trevor_type(json, "text")
+      end
       
       def sir_trevor_image_tag(block, image_type) 
         # Does the image type exist on the block?
