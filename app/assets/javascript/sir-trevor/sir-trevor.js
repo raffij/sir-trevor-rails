@@ -1380,7 +1380,8 @@
                 created_at: data.created_at,
                 status_url: url,
                 id: data.id_str,
-                urls: data.entities.urls
+                urls: data.entities.urls,
+                media: data.entities.media
               };
               
               // Save this data on the block
