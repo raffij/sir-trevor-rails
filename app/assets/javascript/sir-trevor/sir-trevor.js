@@ -1398,7 +1398,6 @@
             // Make our AJAX call
             $.ajax({
               url: "/admin/news/fetch_tweet/" + tweetID,
-              dataType: "JSONP",
               success: _.bind(tweetCallbackSuccess, this),
               error: _.bind(tweetCallbackFail, this)
             });
