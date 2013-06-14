@@ -1397,7 +1397,7 @@
             
             // Make our AJAX call
             $.ajax({
-              url: "//api.twitter.com/1/statuses/show/" + tweetID + ".json?include_entities=true",
+              url: "/admin/news/fetch_tweet/" + tweetID,
               dataType: "JSONP",
               success: _.bind(tweetCallbackSuccess, this),
               error: _.bind(tweetCallbackFail, this)
